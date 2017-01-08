@@ -1,0 +1,25 @@
+blog_homepage:
+    path:     /
+    defaults: { _controller: BlogBundle:Default:index }
+
+blog_authors:
+    path:  /authors
+    defaults: {_controller: BlogBundle:Authors:index }
+
+blog_authors_add:
+    path:  /authors/add
+    defaults: {_controller: BlogBundle:Authors:addAuthor }
+
+blog_authors_add_api:
+    path:  /authors/create
+    defaults: {_controller: BlogBundle:Authors:createAuthor }
+    methods: [POST]
+
+blog_authors_list:
+    path:  /authors/list
+    defaults: {_controller: BlogBundle:Authors:listAuthors }
+
+blog_authors_remove:
+    path:  /authors/remove/{authorId}
+    methods: [DELETE]
+    defaults: {_controller: BlogBundle:Authors:deleteAuthors}

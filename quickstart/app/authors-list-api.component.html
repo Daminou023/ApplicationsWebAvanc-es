@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+              <h2>All authors</h2>
+          <ul class = "authors">
+            <li *ngFor="let author of APIauthors" 
+              [class.selected]="author === selectedAuthor"
+              (click)="onSelect(author)">
+              <span class = "badge">{{author.id}}:</span>
+              <span>{{author.name}}</span>
+            </li>
+          </ul>
+          	<h2>Delete authors</h2>
+          <ul class = "authors">
+            <li *ngFor="let author of APIauthors">
+              <div (click)="deleteAuthor(author.id)">
+              <span>Delete author {{author.id}}:</span></div>
+            </li>
+          </ul>
